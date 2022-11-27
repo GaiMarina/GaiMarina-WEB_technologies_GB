@@ -1,0 +1,82 @@
+h1 {
+color: #006363;
+font-family: 'Nexa Script Heavy', sans-serif;
+}
+
+h2 {
+color: #1D7373;
+font-family: 'Appetite-Italic', sans-serif;
+}
+
+html {
+background-color: #ABABAB;
+}
+
+p {
+font-family: 'Montserrat', sans-serif;
+font-size: 20px;
+}
+
+@font-face {
+	font-family: 'Appetite-Italic';
+	src: url('../fonts/appetite-italic.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/appetite-italic.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/appetite-italic.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/appetite-italic.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/appetite-italic.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/appetite-italic.svg#appetite-italic') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+@font-face {
+	font-family: 'Nexa Script Heavy';
+	src: url('fonts/nexa_script_heavy.eot'); /* IE 9 Compatibility Mode */
+	src: url('fonts/nexa_script_heavy.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('fonts/nexa_script_heavy.woff2') format('woff2'), /* Super Modern Browsers */
+		url('fonts/nexa_script_heavy.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('fonts/nexa_script_heavy.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('fonts/nexa_script_heavy.svg#nexa_script_heavy') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
+a {
+font-style: oblique;
+color: blue;
+text-decoration: none;
+font-size: 24px;}
+
+.block{
+  height: 70px;
+  margin:0 auto;
+}
+.block p{
+  text-align:center;
+  text-transform: uppercase;
+  padding-top: 35px;
+  animation: text 15s infinite linear;
+  padding-left: 100%;
+  white-space: nowrap;
+  color: #323232;
+}
+@keyframes text {
+  0%{
+    transform: translate(0, 0);
+  }
+
+  100%{
+    transform: translate(-160%, 0);
+  }
+}
+
+ol, ul {
+font-size: 20px;
+}
+
+.log {
+background-color: #FFFF73;
+font-size: 24px;}
+
+.line {
+border-bottom: 5px solid #006363;
+}
+
+.border {
+border: 3px solid #00af64;
+}
