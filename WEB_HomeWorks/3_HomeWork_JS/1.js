@@ -8,10 +8,9 @@
 //Примечания: Пользователь всегда вводит корректное число.
 //Советую округлить значение после рассчетов, так как в некоторых случаях может получиться "длинная дробь".
 
-const tempr = Number.parseFloat(prompt("Input the temperature in degrees Celsius:", "temperature °C"));
-alert(`Celsius: ${tempr} °C, Fahrenheit: ${celsiusToFahrenheit(tempr).toFixed(1)} ℉`);
+const temperature = Number.parseFloat(prompt("Input the temperature in degrees Celsius:", "temperature °C"));
+alert(`Celsius: ${temperature} °C, Fahrenheit: ${celsiusToFahrenheit(temperature).toFixed(1)} ℉`);
 
-function celsiusToFahrenheit(t) {
-    const fahr = (9 / 5) * t + 32;
-    return fahr;
-    }
+function celsiusToFahrenheit(temper) {
+    return (9 / 5) * temper + 32;
+}

@@ -2,9 +2,9 @@
 //Также необходимо спросить у пользователя его имя и вызвать функцию, про которую ранее шла речь,
 //передав ей полученное от пользователя имя.
 
-const name = prompt("Input your name:", "name");
-nameToConsole(name);
+const username = prompt("Input your name:", "name");
+nameToConsole(username);
 
-function nameToConsole(n) {
-    console.log (`Привет, ${n}!`);
-    }
+function nameToConsole(name) {
+    console.log(`Привет, ${name}!`);
+}
