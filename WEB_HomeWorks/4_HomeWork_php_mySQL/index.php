@@ -2,9 +2,24 @@
 $experience_title = 'Job Experience';
 
 $experience = [
-    ["title" => "Chief Accountant", "period" => "Oct 2018 - Current", "description" => "My job duties as a chief accountant included overseeing the accounting department, developing financial strategies, making investment decisions, helping company leadership with strategic planning, and making sure the company complies with state and federal financial regulations."],
-    ["title" => "Accountant", "period" => "Dec 2010 - Mar 2017", "description" => "Helping business make critical financial decisions by collecting, tracking, and correcting the company's finances. To be responsible for financial audits, reconciling bank statements, and ensuring financial records are accurate throughout the year."],
-    ["title" => "Secretary", "period" => "Nov 2000 - Dec 2010", "description" => "Providing behind-the-scenes work for an office: organizing files, preparing documents, managing office supply inventory and scheduling appointments."],
+    [
+        "title" => "Chief Accountant",
+        "start" => "Oct 2018",
+        "end" => "Current",
+        "description" => "My job duties as a chief accountant included overseeing the accounting department, developing financial strategies, making investment decisions, helping company leadership with strategic planning, and making sure the company complies with state and federal financial regulations.",
+    ],
+    [
+        "title" => "Accountant",
+        "start" => "Dec 2010",
+        "end" => "Mar 2017",
+        "description" => "Helping business make critical financial decisions by collecting, tracking, and correcting the company's finances. To be responsible for financial audits, reconciling bank statements, and ensuring financial records are accurate throughout the year.",
+    ],
+    [
+        "title" => "Secretary",
+        "start" => "Nov 2000",
+        "end" => "Dec 2010",
+        "description" => "Providing behind-the-scenes work for an office: organizing files, preparing documents, managing office supply inventory and scheduling appointments.",
+    ],
 ];
 ?>
 
@@ -93,18 +108,27 @@ $experience = [
     <div class="w3-twothird">
 
       <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i><?php echo $experience_title; ?></h2>
-        <div class="w3-container">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw
+        w3-margin-right w3-xxlarge w3-text-teal"></i><?php echo $experience_title; ?></h2>
+
         <?php for($i = 0; $i < count($experience); $i++): ?>
-          <h5 class="w3-opacity"><b><?php echo $experience[$i]['title']; ?></b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i><?php echo $experience[$i]['period']; ?></h6>
-          <p><?php echo $experience[$i]['description']; ?></p>
-          <hr>
-        </div>
-        <div class="w3-container">
+            <div class="w3-container">
+                <h5 class="w3-opacity"><b><?=$experience[$i]['title'];?></b></h5>
+                <h6 class="w3-text-teal">
+                  <i class="fa fa-calendar fa-fw w3-margin-right"></i>
+                  <?=$experience[$i]['start'];?> -
+                  <?php if ($i == 0): ?>
+                      <span class="w3-tag w3-teal w3-round">
+                        <?=$experience[$i]['end'];?>
+                      </span>
+                  <?php else: ?>
+                    <?=$experience[$i]['end'];?>
+                  <?php endif; ?>
+                </h6>
+              <p><?php echo $experience[$i]['description']; ?></p>
+              <hr>
+            </div>
         <?php endfor; ?>
-          <br>
-        </div>
       </div>
 
       <div class="w3-container w3-card w3-white">
